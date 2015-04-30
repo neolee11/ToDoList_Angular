@@ -1,0 +1,24 @@
+{
+  "name": "ToDoList_Angular",
+  "version": "0.1",
+  "homepage": "https://github.com/neolee11/ToDoList_Angular",
+  "authors": [
+    "Daniel Li <neolee11@yahoo.com>"
+  ],
+  "description": "To do list in AngularJs",
+  "keywords": [
+    "To",
+    "do"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}
