@@ -2,9 +2,29 @@
  * Created by 31611 on 4/23/2015.
  */
 
-var app = angular.module('app', []);
+(function(){
+    'use strict';
 
-app.controller('taskCtrl', function () {
+    angular.module('app', [
+        'ngRoute',
 
-});
+        //feature area
+        'app.todos',
+        'app.task'
+    ]).config(configRoutes);
+
+    /* @ngInject */
+    function configRoutes($routeProvider, $locationProvider) {
+        $routeProvider.otherwise({ redirectTo: "/" });
+
+        $locationProvider.html5Mode(
+            {
+                enabled:true,
+                requireBase:false
+            });
+
+
+    }
+
+})();
 
