@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/neolee11/ToDoList_Angular/issues"
   },
-  "homepage": "https://github.com/neolee11/ToDoList_Angular"
+  "homepage": "https://github.com/neolee11/ToDoList_Angular",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  },
+  "dependencies": {
+    "node": "0.0.0"
+  }
 }
