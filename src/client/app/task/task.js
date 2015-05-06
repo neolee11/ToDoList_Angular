@@ -15,8 +15,8 @@
         $scope.someVal = 'hello world';
 
         $scope.btnClick = function(){
-            alert("clicked");
-        }
+            window.alert('clicked');
+        };
     }
 
 })();

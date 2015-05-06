@@ -5,28 +5,20 @@
 (function(){
     'use strict';
 
-
     angular.module('app.task')
         .config(configRoutes);
-
 
     function configRoutes($routeProvider) {
 
         $routeProvider.when('/task',
             {
-                templateUrl: '/ToDoList_Angular/src/client/app/task/task.html',
+                //templateUrl: '/ToDoList_Angular/src/client/app/task/task.html',
+                templateUrl: 'app/task/task.html',
                 controller: 'Task',
                 //controllerAs: 'vm',
                 title: 'Task'
             }
         );
-
-        //$locationProvider.html5Mode(
-        //    {
-        //        enabled:true,
-        //        requireBase:false
-        //    });
-
     }
 
 })();

@@ -2,11 +2,17 @@
 <html ng-app="app">
 <head lang="en">
 	<meta charset="UTF-8">
-	<title></title>
+	<title>To Do List</title>
+	<!--<base href="/" />-->
 
-	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
-	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+	<!--<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+	<!--<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.css"/>-->
 
+	<!-- bower:css -->
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+	<!-- endbower -->
+
+	<link rel="stylesheet" href="../../tmp/styles.css"/>
 </head>
 <body>
 
@@ -15,19 +21,36 @@
 </div>
 
 
-<script src="../../bower_components/angular/angular.js"></script>
-<script src="../../bower_components/angular-route/angular-route.js"></script>
-<script src="app/app.module.js"></script>
+<!--<script src="../../bower_components/angular/angular.js"></script>-->
+<!--<script src="../../bower_components/angular-route/angular-route.js"></script>-->
+<!--<script src="app/app.module.js"></script>-->
+
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/src/client/app/app.module.js"></script>
+<script src="/src/client/app/task/task.module.js"></script>
+<script src="/src/client/app/todos/todos.module.js"></script>
+<script src="/src/client/app/task/config.route.js"></script>
+<script src="/src/client/app/task/task.js"></script>
+<script src="/src/client/app/todos/config.route.js"></script>
+<script src="/src/client/app/todos/todos.js"></script>
+<!-- endinject -->
 
 <!--To Dos-->
-<script src="app/todos/todos.module.js"></script>
-<script src="app/todos/config.route.js"></script>
-<script src="app/todos/todos.js"></script>
+<!--<script src="app/todos/todos.module.js"></script>-->
+<!--<script src="app/todos/config.route.js"></script>-->
+<!--<script src="app/todos/todos.js"></script>-->
 
 <!--task-->
-<script src="app/task/task.module.js"></script>
-<script src="app/task/config.route.js"></script>
-<script src="app/task/task.js"></script>
+<!--<script src="app/task/task.module.js"></script>-->
+<!--<script src="app/task/config.route.js"></script>-->
+<!--<script src="app/task/task.js"></script>-->
 
 
 </body>

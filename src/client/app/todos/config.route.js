@@ -5,7 +5,6 @@
 (function(){
     'use strict';
 
-
     angular.module('app.todos')
         .config(configRoutes);
 
@@ -13,7 +12,7 @@
     function configRoutes($routeProvider) {
         $routeProvider.when('/',
             {
-                templateUrl: '/ToDoList_Angular/src/client/app/todos/todos.html',
+                templateUrl: '/app/todos/todos.html',
                 controller: 'Todos',
                 //controllerAs: 'vm',
                 title: 'To Dos'
