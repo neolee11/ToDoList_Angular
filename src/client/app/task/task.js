@@ -8,13 +8,12 @@
     angular.module('app.task')
         .controller('Task', Task);
 
-    //Task.$inject = ['$scope'];
-
     /* @ngInject */
-    function Task($scope) {
-        $scope.someVal = 'hello world';
+    function Task() {
+        var vm = this;
+        vm.someVal = 'hello world';
 
-        $scope.btnClick = function(){
+        vm.btnClick = function(){
             window.alert('clicked');
         };
     }

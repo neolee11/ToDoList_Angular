@@ -15,7 +15,7 @@
                 //templateUrl: '/ToDoList_Angular/src/client/app/task/task.html',
                 templateUrl: 'app/task/task.html',
                 controller: 'Task',
-                //controllerAs: 'vm',
+                controllerAs: 'vm',
                 title: 'Task'
             }
         );

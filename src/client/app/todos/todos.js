@@ -8,8 +8,6 @@
     angular.module('app.todos')
         .controller('Todos', Todos);
 
-    //Task.$inject = ['$scope'];
-
     /* @ngInject */
     function Todos() {
         var vm = this;
