@@ -5,5 +5,5 @@
 (function(){
     'use strict';
 
-    angular.module('app.todos', ['ngRoute']);
+    angular.module('app.todos', ['app.core']);
 })();

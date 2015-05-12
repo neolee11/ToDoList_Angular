@@ -12,9 +12,9 @@
     function configRoutes($routeProvider) {
         $routeProvider.when('/',
             {
-                templateUrl: '/app/todos/todos.html',
+                templateUrl: 'app/todos/todos.html',
                 controller: 'Todos',
-                //controllerAs: 'vm',
+                controllerAs: 'vm',
                 title: 'To Dos'
             }
         );

@@ -6,7 +6,7 @@
     'use strict';
 
     angular.module('app', [
-        'ngRoute',
+        'app.core',
 
         //feature area
         'app.todos',
@@ -15,7 +15,7 @@
 
     /* @ngInject */
     function configRoutes($routeProvider, $locationProvider) {
-        $routeProvider.otherwise({ redirectTo: '/' });
+        $routeProvider.otherwise({redirectTo: '/'});
 
         $locationProvider.html5Mode(
             {
@@ -25,4 +25,3 @@
     }
 
 })();
-

@@ -11,8 +11,9 @@
     //Task.$inject = ['$scope'];
 
     /* @ngInject */
-    function Todos($scope) {
-        $scope.content = 'To Dos';
+    function Todos() {
+        var vm = this;
+        vm.content = 'To Dos';
     }
 
 })();
