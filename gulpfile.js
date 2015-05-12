@@ -190,7 +190,7 @@ gulp.task('serve-build', ['build'], function() {
     serve(false /* isDev */);
 });
 
-gulp.task('serve-build1', function() {
+gulp.task('serve-build-direct', function() {
     serve(false /* isDev */);
 });
 
