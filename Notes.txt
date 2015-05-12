@@ -1,0 +1,54 @@
+GULP TASKS
+
+======= COMPONENT TASKS ========
+help/default: listing tasks
+
+vet: Code Analysis - go through all applicable js files and performace jshint and jscs on them.
+
+styles: less (from less path) to css (tmp folder) compilation
+
+less-watcher: watch less file (src less file) changes
+
+images: copying and compressing images (from src images folder to build image folder)
+
+templatecache: create AngularJS template cache. Serve html template from client app folder, and put into temp folder.
+
+wiredep: Wire up the bower css js (using wiredep) and our app js (using gulp-inject js) into index.html
+
+inject: Wire up the app css (from tmp folder using gulp-inject css) into the html, and call wiredep
+
+
+======= BUILD PROJECT ========
+build: build everything. Optimize code, run images task, delete temp folder
+
+optimize: concatenate all js and css references into single js and css file respectively. Minify them, and update referenced files' version numbers, build a minifest file. Output all production ready files into a build folder
+
+bump: just bump or change package.json version number
+
+
+======= RUN PROJECT ========
+serve-build: run project from build folder after project is built.
+
+serve-build-direct: run project from build folder without building project
+
+serve-dev: run project from src folder after running inject task
+
+
+======= TESTING ========
+test: single test running all spec files in command line, also build reports
+
+autotest: continuous testing within command line
+
+serve-specs: run spec files from src folder after building specs and continous watching file changes and running tests in browser view
+
+build-specs: just inject dependencies into specs.html
+
+
+======= CLEANING ========
+clean: delete build and tmp folder
+
+clean-images: delete images in build folder
+
+clean-styles: delete styels in tmp folder
+
+clean-code: delete js and html files in tmp and build folder

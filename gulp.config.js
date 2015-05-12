@@ -4,10 +4,10 @@ module.exports = function() {
     var report = './report/';
     var root = './';
     var server = './src/server/';
-    var specRunnerFile = 'specs.html'; //to learn
+    var specRunnerFile = 'specs.html';
     var temp = './tmp/';
-    var wiredep = require('wiredep'); //to learn
-    var bowerFiles = wiredep({devDependencies: true})['js']; //to learn
+    var wiredep = require('wiredep');
+    var bowerFiles = wiredep({devDependencies: true})['js'];
 
     var config = {
         /**
@@ -73,7 +73,6 @@ module.exports = function() {
             './bower.json'
         ],
 
-        //to learn
         /**
          * specs.html, our HTML spec runner
          */
@@ -87,7 +86,6 @@ module.exports = function() {
         ],
         specs: [clientApp + '**/*.spec.js'],
 
-        //to learn
         /**
          * Karma and testing settings
          */
@@ -110,11 +108,10 @@ module.exports = function() {
         return options;
     };
 
-    config.karma = getKarmaOptions(); //to learn
+    config.karma = getKarmaOptions();
 
     return config;
 
-    //to learn
     function getKarmaOptions() {
         var options = {
             files: [].concat(

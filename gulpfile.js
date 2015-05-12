@@ -103,7 +103,6 @@ gulp.task('inject', ['wiredep', 'styles', 'templatecache'], function() {
 });
 
 /* BUILD PROJECT */
-//To learn
 gulp.task('build', ['optimize', 'images'], function() {
     log('Building everything');
 
@@ -117,7 +116,6 @@ gulp.task('build', ['optimize', 'images'], function() {
     notify(msg);
 });
 
-//To learn
 gulp.task('optimize', ['inject', 'test'], function() {
     log('Optimizing the javascript, css, html');
 
@@ -208,14 +206,12 @@ gulp.task('autotest', ['vet', 'templatecache'], function(done) {
     startTests(false /* singleRun */, done);
 });
 
-//To learn
 gulp.task('serve-specs', ['build-specs'], function(done) {
     log('run the spec runner');
     serve(true /* isDev */, true /* specRunner */);
     done();
 });
 
-//To learn
 gulp.task('build-specs', ['templatecache'], function() {
     log('building the spec runner');
 
