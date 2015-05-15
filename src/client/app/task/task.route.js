@@ -8,11 +8,12 @@
     angular.module('app.task')
         .config(configRoutes);
 
-    function configRoutes($routeProvider) {
+    /* @ngInject */
+    function configRoutes($stateProvider) {
 
-        $routeProvider.when('/task',
+        $stateProvider.state('task',
             {
-                //templateUrl: '/ToDoList_Angular/src/client/app/task/task.html',
+                url: "/task",
                 templateUrl: 'app/task/task.html',
                 controller: 'Task',
                 controllerAs: 'vm',
@@ -20,5 +21,19 @@
             }
         );
     }
+
+    ///* @ngInject */
+    //function configRoutes($routeProvider) {
+    //
+    //    $routeProvider.when('/task',
+    //        {
+    //            //templateUrl: '/ToDoList_Angular/src/client/app/task/task.html',
+    //            templateUrl: 'app/task/task.html',
+    //            controller: 'Task',
+    //            controllerAs: 'vm',
+    //            title: 'Task'
+    //        }
+    //    );
+    //}
 
 })();

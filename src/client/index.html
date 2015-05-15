@@ -20,8 +20,12 @@
 <body>
 
 <div class="container">
-	<div class="ng-view"></div>
+	<div class="ui-view"></div>
 </div>
+
+<!--<div class="container">-->
+	<!--<div ng-include="'app/layout/shell.html'"></div>-->
+<!--</div>-->
 
 <!-- build:js js/lib.js -->
 <!-- bower:js -->
@@ -29,6 +33,7 @@
 <script src="/bower_components/angular/angular.js"></script>
 <script src="/bower_components/angular-route/angular-route.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -37,8 +42,11 @@
 <!-- inject:js -->
 <script src="/src/client/app/app.module.js"></script>
 <script src="/src/client/app/core/core.module.js"></script>
+<script src="/src/client/app/layout/layout.module.js"></script>
 <script src="/src/client/app/task/task.module.js"></script>
 <script src="/src/client/app/todos/todos.module.js"></script>
+<script src="/src/client/app/core/config.js"></script>
+<script src="/src/client/app/layout/shell.js"></script>
 <script src="/src/client/app/task/task.js"></script>
 <script src="/src/client/app/task/task.route.js"></script>
 <script src="/src/client/app/todos/todos.js"></script>

@@ -9,9 +9,10 @@
         .config(configRoutes);
 
     /* @ngInject */
-    function configRoutes($routeProvider) {
-        $routeProvider.when('/',
+    function configRoutes($stateProvider) {
+        $stateProvider.state('todos',
             {
+                url: "/",
                 templateUrl: 'app/todos/todos.html',
                 controller: 'Todos',
                 controllerAs: 'vm',
@@ -19,5 +20,17 @@
             }
         );
     }
+
+    ///* @ngInject */
+    //function configRoutes($routeProvider) {
+    //    $routeProvider.when('/',
+    //        {
+    //            templateUrl: 'app/todos/todos.html',
+    //            controller: 'Todos',
+    //            controllerAs: 'vm',
+    //            title: 'To Dos'
+    //        }
+    //    );
+    //}
 
 })();

@@ -3,6 +3,13 @@
 
     angular
         .module('app.core', [
-            'ngRoute',
+            /*
+             * Angular modules
+             */
+            'ui.router'
+            /*
+             * Our reusable cross app code modules
+             */
+
         ]);
 })();

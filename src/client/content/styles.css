@@ -1,3 +1,6 @@
 body {
-  background-color: darkslategrey;
+  background-color: lightblue;
+}
+.content {
+  background-color: lightgrey;
 }
