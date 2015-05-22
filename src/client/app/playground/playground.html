@@ -1,0 +1,123 @@
+<div class="well">
+	<nav>
+		<a ui-sref="task">Task</a> |
+		<a ui-sref="playground">Play Ground</a>
+	</nav>
+
+	<br/>
+	<button class="btn" ng-click="vm.btnClick()">{{vm.btnVal}}</button>
+	<div id="elTest"></div>
+
+	<div>
+		<b>Invoice:</b>
+
+		<div>
+			Quantity: <input type="number" ng-model="vm.qty"/>
+		</div>
+		<div>Costs:<input type="text" ng-model="vm.cost"/></div>
+		<div>Total:{{vm.qty * vm.cost | currency}}</div>
+	</div>
+
+	<br/>
+
+	<div>
+		<b>Different Inputs</b>
+		<br/><input type="text" ng-model="vm.someTxt"/>
+		<br/><input type="password" ng-model="password"/> {{password}}
+		<br/><input type="submit"/>
+		<br/><input type="button" value="To Lower" ng-click="vm.toLower()"/>
+
+		<br/>Color Selection:
+		<div ng-repeat="color in vm.colors">
+			<input type="radio" ng-value="color" ng-model="vm.selColor">
+			{{color}}
+			</input>
+		</div>
+		<!--<input type="radio" value='Red' ng-model="vm.selColor">Red</input>-->
+		<!--<input type="radio" value='Blue' ng-model="vm.selColor">Blue</input>-->
+		<!--<input type="radio" value='Green' ng-model="vm.selColor">Green</input>-->
+		Selected Color: {{vm.selColor}}
+
+		<br/>Favorite Sports: <input type="checkbox" ng-model="soccer">Soccer</input>
+		<input type="checkbox" ng-model="basketball" ng-true-value="'Yes'" ng-false-value="'No'">Basketball</input>
+		Soccer selected: {{soccer}}
+		Basketball selected: {{basketball}}
+
+		<br/><input type="color" ng-model="colorPal"/> Color: {{colorPal}}
+		<br/><input type="date" ng-model="mydate"/> {{mydate}}
+
+
+		<br/>
+
+		<form name='myForm'>
+			<input type="datetime-local" id="exampleInput" name="input" ng-model="value"
+			       placeholder="yyyy-MM-ddTHH:mm:ss" min="2001-01-01T00:00:00" max="2013-12-31T00:00:00" required/>
+			<span class="error" ng-show="myForm.input.$error.required">Required!</span>
+			<span class="error" ng-show="myForm.input.$error.datetimelocal">Not a valid date!</span>
+			<span>value = {{value | date: "yyyy-MM-ddTHH:mm:ss"}}</span><br/>
+			<span>myForm.input.$valid = {{myForm.input.$valid}}</span><br/>
+			<span>myForm.input.$error = {{myForm.input.$error}}</span><br/>
+			<span>myForm.$valid = {{myForm.$valid}}</span><br/>
+			<span>myForm.$error.required = {{!!myForm.$error.required}}</span><br/>
+		</form>
+
+		<br/>
+
+		<form ng-submit="vm.submit()">
+			<fieldset>
+				<legend>Informtion to fill out:</legend>
+				Email: <input type="email"/>
+				<br/>Month: <input type="month"/>
+				<br/>Tel: <input type="tel" pattern=""/>
+				<br/>Time: <input type="time"/>
+				<br/>URL: <input type="url"/>
+				<br/>Week: <input type="week"/>
+			</fieldset>
+			<br/><input type="submit"/>
+			<input type="reset"/>
+			{{vm.numSubmitted}}
+		</form>
+
+
+		<br/><input type="number"/>
+		<br/><input type="range" ng-model="selRange" min="0" max="10"/>{{selRange}}
+
+		<br/>Search: <input type="search" results="5" ng-blur=""/>
+
+		<br/>
+		<button type="button" ng-click="vm.toJson()">To Json</button>
+		<br/>{{vm.jsonModel}}
+	</div>
+
+	<div>
+		<!--<img src="/src/client/content/images/background-dummie.gif" alt="My image"/>-->
+		<ol>
+			<li ng-repeat="color in vm.colors">{{color}}</li>
+		</ol>
+	</div>
+
+	<div>
+		<select>
+			<option ng-repeat="color in vm.colors" ng-value="color">{{color}}</option>
+		</select>
+	</div>
+
+	<div>
+		<table>
+			<caption>List of Students</caption>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr ng-repeat="person in vm.myModel">
+					<td>{{person.first}}</td>
+					<td>{{person.last}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

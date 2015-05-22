@@ -11,6 +11,7 @@
         //feature area
         'app.todos',
         'app.task',
+        'app.playground',
         'app.layout'
     ]).config(configRoutes);
 

@@ -12,7 +12,8 @@
     function configRoutes($stateProvider) {
         $stateProvider.state('todos',
             {
-                url: "/",
+                //url: "/",
+                url: "/todos",
                 templateUrl: 'app/todos/todos.html',
                 controller: 'Todos',
                 controllerAs: 'vm',
