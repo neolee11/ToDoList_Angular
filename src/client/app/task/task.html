@@ -1,3 +1,16 @@
 <div class="well">
-	<button class="btn" ng-click="vm.btnClick()">{{vm.someVal}}</button>
+	<div ng-show="false">
+		<button class="btn" ng-click="vm.btnClick()">{{vm.someVal}}</button>
+	</div>
+
+	<div>
+		<h3>Steps</h3>
+		<br/>
+		<div ng-repeat="step in vm.steps">
+			<input type="text" ng-model="step" />
+		</div>
+
+		<br/>
+		<input type="button" value="Create Step" ng-click="vm.createStep()"/>
+	</div>
 </div>

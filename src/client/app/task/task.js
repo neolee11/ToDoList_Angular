@@ -9,12 +9,17 @@
         .controller('Task', Task);
 
     /* @ngInject */
-    function Task() {
+    function Task($state, taskManagerService) {
         var vm = this;
         vm.someVal = 'hello world';
 
         vm.btnClick = function(){
             window.alert('clicked');
+        };
+
+        vm.steps = taskManagerService.allSteps;
+        vm.createStep = function(){
+            $state.go('playground');
         };
     }
 

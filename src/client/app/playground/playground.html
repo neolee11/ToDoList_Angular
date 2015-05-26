@@ -1,5 +1,5 @@
 <div class="well">
-	<nav>
+	<nav ng-show="vm.showNav">
 		<a ui-sref="task">Task</a> |
 		<a ui-sref="playground">Play Ground</a>
 	</nav>
@@ -8,7 +8,7 @@
 	<button class="btn" ng-click="vm.btnClick()">{{vm.btnVal}}</button>
 	<div id="elTest"></div>
 
-	<div>
+	<div ng-show="vm.showInvoice">
 		<b>Invoice:</b>
 
 		<div>
@@ -20,7 +20,7 @@
 
 	<br/>
 
-	<div>
+	<div ng-show="vm.showDifferentInputs">
 		<b>Different Inputs</b>
 		<br/><input type="text" ng-model="vm.someTxt"/>
 		<br/><input type="password" ng-model="password"/> {{password}}
@@ -89,20 +89,20 @@
 		<br/>{{vm.jsonModel}}
 	</div>
 
-	<div>
+	<div ng-show="vm.showList">
 		<!--<img src="/src/client/content/images/background-dummie.gif" alt="My image"/>-->
 		<ol>
 			<li ng-repeat="color in vm.colors">{{color}}</li>
 		</ol>
 	</div>
 
-	<div>
+	<div ng-show="vm.showSelection">
 		<select>
 			<option ng-repeat="color in vm.colors" ng-value="color">{{color}}</option>
 		</select>
 	</div>
 
-	<div>
+	<div ng-show="vm.showTable">
 		<table>
 			<caption>List of Students</caption>
 			<thead>
@@ -120,4 +120,46 @@
 			</tbody>
 		</table>
 	</div>
+
+	<div>
+		<h3>Create New Task Step</h3>
+		<form ng-submit="vm.createStep(stepTxt)">
+			<label for="txtStep">New Task</label>
+			<input type="text" id="txtStep" ng-model="stepTxt"/>
+			<button type="submit">Create</button>
+		</form>
+	</div>
+
+	<br/>
+	<div>
+		Double the value: <input type="text" ng-model="vm.dblNumInput" />
+		<button type="button" ng-click="vm.dblNumInput = vm.doubleVal(vm.dblNumInput)">Double</button>
+		<br/>
+		{{vm.dblNumInput | pgFilter}}
+	</div>
+
+	<div>
+		<br/>
+		Test Async: <input type="text" ng-model="vm.asynVal"/>
+		<button ng-click="vm.runAsync()">Run Async</button>
+	</div>
+
+	<div ng-show="false">
+		<br/>
+		<button ng-click="vm.runAsyncAll()">Run Async All</button>
+		<p ng-model="vm.asyncAllResult"></p>
+	</div>
+
+	<div>
+		<br/>
+		<pg-welcome pg-mouse-enter></pg-welcome>
+		<br/>
+		<div pg-welcome></div>
+	</div>
+
+	<div>
+		<br/>
+		<pg-current-time time-format="vm.timeFormat" parent-popup="vm.myPopup()"></pg-current-time>
+	</div>
+
 </div>

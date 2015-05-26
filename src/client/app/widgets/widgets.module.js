@@ -5,6 +5,5 @@
 (function(){
     'use strict';
 
-    angular.module('app.playground', ['app.core']);
-
+    angular.module('app.widgets', []);
 })();

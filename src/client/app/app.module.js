@@ -7,6 +7,7 @@
 
     angular.module('app', [
         'app.core',
+        'app.widgets',
 
         //feature area
         'app.todos',
