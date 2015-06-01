@@ -1,7 +1,54 @@
-body{
+body {
   background-color: lightblue;
 }
 
 .content {
-  background-color:lightgrey;
+  background-color: lightgrey;
 }
+
+.three-column {
+  position: relative;
+}
+
+.column-display {
+  width: 300px;
+  float: left;
+  margin: 10px;
+  background-color: yellow;
+  text-shadow: red;
+}
+
+.column-display:hover{
+  background-color: green;
+}
+
+button:hover{
+  background-color: yellowgreen;
+}
+
+.my-animation {
+  clear: both;
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  -webkit-animation: my-move 5s infinite;
+  -o-animation: my-move 5s infinite;
+  animation: my-move 5s infinite;
+}
+
+
+@-webkit-keyframes my-move {
+  from {left: 0px;}
+  to {left: 800px;}
+}
+
+@keyframes my-move {
+  from {
+    left: 0px;
+  }
+  to {
+    right: 800px;
+  }
+}
+

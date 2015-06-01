@@ -1,0 +1,20 @@
+Angular Directives - https://docs.angularjs.org/guide/directive
+- Directive are created, registered, and invoked like a factory service.
+- Possible properties:
+    restrict
+    require (example ^myTabs: The ^ prefix means that this directive searches for the controller on its parents (without the ^ prefix, the directive would look for the controller on just its own element)
+    templateUrl
+    template
+    scope (These properties also MUST be set as the attributes of the directive html element. See scope binding)
+    transclude: just include usage element¡¯s content in location of transclude. Only use ¡°transclude: true¡± when you want to create a directive that wraps arbitrary content
+    link: function signature - function(scope, element, attrs, ctrls)
+    controller
+    bindToController (set to true specifies that any values passed into the directive's scope via the scope property are automatically accessible in the controller using this
+    controllerAs
+- Controller vs link: use controller when you want to expose an API to other directives. Otherwise use link.
+  Controller can expose an API, and link functions can interact with controllers using require
+
+Scope binding for directives (in a way it exposes directives APIs)
+"@"   (  Text binding / one-way binding ) It always expects the mapped attribute to be an expression
+"="   ( Direct model binding / two-way binding ) It¡¯ll always expect the attribute value to be the model name
+"&"   ( Behaviour binding / Method binding ). This is used to bind any methods from the parent scope to the directive scope. This will be particularly useful when our directive needs to execute any callbacks in the parent scope

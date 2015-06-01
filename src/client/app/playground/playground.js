@@ -112,6 +112,8 @@
         vm.myPopup = function(){
             $window.alert("Popup from parent");
         };
+
+        vm.columnContent = "a;lsdfjasdl;fj lasdjf asdfladslfj asfasdlflflsdjalf jlsadflaslf lsadlf jlasflsafjldfjlsjl;fjlasdjfl jlasdj fasdf lasjlfjasdlfjadlsf";
     }
 
     var model = [
